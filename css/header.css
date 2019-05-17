@@ -1,6 +1,19 @@
 nav.nav {
-    background: lightsteelblue;
+    background: #7289ad;
 }
 a.nav-link {
     color: #fffcaf;
+}
+a.dropdown-item {
+    background-color: #7289ad;
+    color: #fffcaf;
+}
+.dropdown-menu.show {
+    background: slategray;
+}
+.dropdown-divider {
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    border-top: 1px solid #e9ecef;
 }
