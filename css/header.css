@@ -1,8 +1,5 @@
-nav.nav {
+nav.navbar.navbar-expand-lg {
     background: #7289ad;
-}
-a.nav-link {
-    color: #fffcaf;
 }
 a.dropdown-item {
     background-color: #7289ad;
@@ -16,4 +13,16 @@ a.dropdown-item {
     margin: 0;
     overflow: hidden;
     border-top: 1px solid #e9ecef;
+}
+a.navbar-brand {
+    background: white;
+    width: 13%;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #fffcaf;
+    font-family: serif;
+    font-size: x-large;
+}
+nav.navbar.navbar-expand-lg.navbar-dark {
+    padding: 0%;
 }
