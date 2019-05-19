@@ -1,0 +1,30 @@
+footer
+{
+    background: #7289ad;
+    font-family: serif;
+    font-size: x-large;
+    margin-top: 20px;
+}
+
+.footer-text
+{
+    color: #fffcaf;
+    font-family: serif;
+    font-size: x-large;
+}
+
+/* Style all font awesome icons */
+.fa
+{
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover
+{
+    opacity: 0.7;
+}
