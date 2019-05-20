@@ -6,7 +6,7 @@ a.dropdown-item {
     color: #fffcaf;
 }
 .dropdown-menu.show {
-    background: slategray;
+    background: white;
 }
 .dropdown-divider {
     height: 0;
@@ -25,4 +25,13 @@ a.navbar-brand {
 }
 nav.navbar.navbar-expand-lg.navbar-dark {
     padding: 0%;
+}
+body {
+    background: lightgray;
+}
+#mt_rainier{
+    width: 38%;
+}
+img#mt_rainier {
+    margin: 3%;
 }
