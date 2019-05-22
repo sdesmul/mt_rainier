@@ -5,14 +5,11 @@
  * Date: 4/8/2019
  * Time: 2:16 PM
  */
-
 // Start session
 session_start();
-
 // Turn on error reporting
 ini_set('display_error', 1);
 error_reporting(E_ALL);
-
 //require autoload file
 require_once ('vendor/autoload.php');
 
@@ -38,6 +35,5 @@ $f3->route('GET /', function()
     //require the footer after the contents of the page
     require_once('views/footer.html');
 });
-
 // Run Fat-Free
 $f3->run();
