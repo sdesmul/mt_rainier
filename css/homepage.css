@@ -1,0 +1,20 @@
+img.img-fluid.d-block.w-100 {
+    padding-top: 3%;
+}
+
+h1.header-title.text-center {
+    margin-top: 30%;
+}
+
+h1.header-title.text-center
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fffcaf;
+}
+
+.col {
+    padding-top: 2%;
+}
+

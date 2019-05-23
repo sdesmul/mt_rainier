@@ -26,7 +26,8 @@ a.dropdown-item
 a.navbar-brand
 {
     background: white;
-    width: 13%;
+    width: 9%;
+    max-height: 40% !important;
 }
 .navbar-dark .navbar-nav .nav-link
 {
@@ -43,19 +44,12 @@ body {
     background: lightgray;
 }
 #mt_rainier{
-    width: 38%;
+    width: 34%;
 }
 img#mt_rainier {
     margin: 3%;
 }
 
 
-.header-title
-{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: forestgreen;
-}
 
 
