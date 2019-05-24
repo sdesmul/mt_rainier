@@ -6,15 +6,37 @@ h1.header-title.text-center {
     margin-top: 30%;
 }
 
-h1.header-title.text-center
-{
-    margin-top: 20px;
-    margin-bottom: 20px;
+#headTitle {
+    margin-top: 10%;
+    z-index: -1;
+    /* margin-bottom: 44px; */
     padding: 20px;
     background-color: #fffcaf;
+    position: sticky;
 }
 
 .col {
     padding-top: 2%;
 }
 
+.w-50 {
+    z-index: 1;
+    margin: 1rem 1rem 0rem 5rem;
+}
+
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    z-index: 1;
+    background-size: 50%;
+    /* width: 23%; */
+}
+
+.p-0 {
+    max-width: inherit;
+}
+
+img.img-fluid.w-50.float-left.rounded-circle.img-thumbnail {
+    max-width: 33%;
+}
