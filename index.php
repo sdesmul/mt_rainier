@@ -35,5 +35,21 @@ $f3->route('GET /', function()
     //require the footer after the contents of the page
     require_once('views/footer.html');
 });
+
+//sphynx queen page
+$f3->route('GET /sphynx-queens', function()
+{
+    //require the header before the contents of the page
+    require_once('views/header.html');
+
+    //display the contents of the page
+    $view = new Template();
+    echo $view->render("views/sphynx_queens.html");
+
+    //require the footer after the contents of the page
+    require_once('views/footer.html');
+});
+
+
 // Run Fat-Free
 $f3->run();
