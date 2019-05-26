@@ -121,6 +121,5 @@ $f3->route('GET /care', function()
 
 
 
-
 // Run Fat-Free
 $f3->run();

@@ -60,7 +60,6 @@ img.d-block.w-100 {
 /*Sphynx queen css*/
 
 #rotated {
-    transform: rotate(90deg); /* Equal to rotateZ(45deg) */
     height: auto;
     width: 100% !important;
     padding: 0em 0em 0em 0em;
@@ -78,4 +77,14 @@ card.mx-auto {
 
 .card.mb-3.mx-auto.w-75 {
     margin-top: 3%;
+}
+img#val_stairs {
+    transform: rotate(90deg) scale(1,1.5);
+    padding: 37px;
+    background: black;
+}
+
+/*care*/
+.care{
+    color: #7289ad;
 }
