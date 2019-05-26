@@ -26,6 +26,8 @@ require_once('model/validation-functions.php');
 $f3->route('GET /', function()
 {
     //require the header before the contents of the page
+
+
     require_once('views/header.html');
 
     //display the contents of the page
@@ -39,15 +41,13 @@ $f3->route('GET /', function()
 //sphynx queen page
 $f3->route('GET /sphynx-queens', function()
 {
-    //require the header before the contents of the page
-    require_once('views/header.html');
 
     //display the contents of the page
     $view = new Template();
+    echo $view->render('views/header.html');
     echo $view->render("views/sphynx_queens.html");
+    echo $view->render('views/footer.html');
 
-    //require the footer after the contents of the page
-    require_once('views/footer.html');
 });
 
 
