@@ -25,17 +25,11 @@ require_once('model/validation-functions.php');
 //homepage
 $f3->route('GET /', function()
 {
-    //require the header before the contents of the page
-
-
-    require_once('views/header.html');
-
     //display the contents of the page
     $view = new Template();
+    echo $view->render('views/header.html');
     echo $view->render("views/home_page.html");
-
-    //require the footer after the contents of the page
-    require_once('views/footer.html');
+    echo $view->render('views/footer.html');
 });
 
 //sphynx queen page
