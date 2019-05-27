@@ -1,13 +1,18 @@
 <?php
 
 class kitten extends cat{
+    //available, pending, or sold
     private $_available;
+    //When a kitten is 12 weeks old and can go
+    //to there new home
+    private $_goHomeDate;
 
 
 
-    function __construct($available)
+    function __construct($available, $goHomeDate)
     {
         $this->__available = $available;
+        $this->_goHomeDate = $goHomeDate;
     }
 
 

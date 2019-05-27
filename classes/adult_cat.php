@@ -6,12 +6,15 @@
  * Time: 10:10 PM
  */class adult_cat extends cat{
     private $_registeredName;
+    //are they a upcoming, current, or retired adult cat
+    private $_status;
 
 
 
-    function __construct($registeredName)
+    function __construct($registeredName, $status)
     {
         $this->__registeredName = $registeredName;
+        $this->_status = $status;
     }
 
 
