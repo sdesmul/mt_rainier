@@ -11,8 +11,10 @@
 
 
 
-    function __construct($registeredName, $status)
+    function __construct($registeredName, $status, $name,$color,$description,$birthday,$gender)
     {
+        parent::__construct($name,$color,$description,$birthday,$gender);
+
         $this->__registeredName = $registeredName;
         $this->_status = $status;
     }
@@ -20,19 +22,36 @@
 
 
     /**Get the name of the pet
-     * @return string $name the name of the pet
+     * @return string $registeredName the registeredName of the cat
      */
     function getRegisteredName()
     {
         return $this->_registeredName;
     }
 
+    /**Get the name of the pet
+     * @return string $status the status of the cat
+     */
+    function getStatus()
+    {
+        return $this->_status;
+    }
+
+
 
     /**Set the pets color
-     * @param String $color the color of the pet
+     * @param String $registeredName the registeredName of the cat
      */
     function setAvailable($registeredName)
     {
         $this->_registeredName = $registeredName;
+    }
+
+    /**Set the pets color
+     * @param String $status the status of the pet
+     */
+    function setStatus($status)
+    {
+        $this->_status = $status;
     }
 }
