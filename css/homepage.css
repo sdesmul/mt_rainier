@@ -33,6 +33,10 @@ h1.header-title.text-center {
     /* width: 23%; */
 }
 
+strong {
+    color: slategrey;
+}
+
 .p-0 {
     max-width: inherit;
 }
@@ -57,7 +61,15 @@ img.d-block.w-100 {
     transform: rotate(90deg);
 }
 
+html {
+    /*overflow-y: hidden;*/
+    overflow-x: hidden !important;
+}
+
 /*Sphynx queen css*/
+ol.carousel-indicators {
+    z-index: 3 !important;
+}
 
 #rotated {
     height: auto;
@@ -78,13 +90,14 @@ card.mx-auto {
 .card.mb-3.mx-auto.w-75 {
     margin-top: 3%;
 }
+
 img#val_stairs {
-    transform: rotate(90deg) scale(1,1.5);
+    transform: rotate(90deg) scale(1, 1.5);
     padding: 37px;
     background: black;
 }
 
 /*care*/
-.care{
+.care {
     color: #7289ad;
 }
