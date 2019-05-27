@@ -9,28 +9,49 @@ class kitten extends cat{
 
 
 
-    function __construct($available, $goHomeDate)
+    function __construct($available, $goHomeDate, $name,$color,$description,$birthday,$gender)
     {
+        parent::__construct($name,$color,$description,$birthday,$gender);
+
         $this->__available = $available;
         $this->_goHomeDate = $goHomeDate;
     }
 
 
 
-    /**Get the name of the pet
-     * @return string $name the name of the pet
+    /**Get the name of the cat
+     * @return string $name the name of the cat
      */
     function getAvailable()
     {
         return $this->_available;
     }
 
+    /**Get the GoHomeDate of the cat
+     * @return string $goHomeDate the go Home Date of the cat
+     */
+    function getGoHomeDate()
+    {
+        return $this->_goHomeDate;
+    }
 
-    /**Set the pets color
-     * @param String $color the color of the pet
+
+
+    /**Set the cat available
+     * @param String $available the available of the cat
      */
     function setAvailable($available)
     {
         $this->_available = $available;
     }
+
+    /**Get the go Home Date  of the cat
+     * @return string $goHomeDate the go Home Date of the cat
+     */
+    function setGoHomeDate($goHomeDate)
+    {
+        $this->_goHomeDate = $goHomeDate;
+    }
+
+
 }
