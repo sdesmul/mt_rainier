@@ -4,7 +4,7 @@
  * User: saman
  * Date: 5/26/2019
  * Time: 10:10 PM
- */class adult_cat extends cat{
+ */class Adult_cat extends Cat{
     private $_registeredName;
     //are they a upcoming, current, or retired adult cat
     private $_status;

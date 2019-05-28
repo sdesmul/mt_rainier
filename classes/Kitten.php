@@ -1,6 +1,6 @@
 <?php
 
-class kitten extends cat{
+class Kitten extends Cat{
     //available, pending, or sold
     private $_available;
     //When a kitten is 12 weeks old and can go

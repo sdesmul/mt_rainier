@@ -1,5 +1,5 @@
 <?php
-class cat{
+class Cat{
     private $_name;
     private $_color;
     private $_description;

@@ -35,6 +35,16 @@ $f3->route('GET /', function()
 //sphynx queen page
 $f3->route('GET /sphynx-queens', function()
 {
+    $valarie = new Adult_cat("PearlHearts Valarie", "Current Queen",
+        "Valarie", "Seal Sepia", "Valarie is cute", "February 18, 2017",
+        "Female");
+
+    $olive = new Adult_cat("MTRAINIER Olive", "Upcoming Queen",
+        "Olive", "Black Tortoiseshell", "Olive is a future queen. When she 
+        is a year old she will have all the proper health testing to ensure the health of the kittens",
+        "December 17, 2018",
+        "Female");
+
 
     //display the contents of the page
     $view = new Template();
