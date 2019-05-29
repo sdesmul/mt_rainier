@@ -15,7 +15,7 @@
     {
         parent::__construct($name,$color,$description,$birthday,$gender);
 
-        $this->__registeredName = $registeredName;
+        $this->_registeredName = $registeredName;
         $this->_status = $status;
     }
 
