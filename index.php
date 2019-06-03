@@ -5,14 +5,11 @@
  * Date: 4/8/2019
  * Time: 2:16 PM
  */
-
 // Start session
 session_start();
-
 // Turn on error reporting
 ini_set('display_error', 1);
 error_reporting(E_ALL);
-
 //require autoload file
 require_once ('vendor/autoload.php');
 
@@ -28,16 +25,116 @@ require_once('model/validation-functions.php');
 //homepage
 $f3->route('GET /', function()
 {
-    //require the header before the contents of the page
-    require_once('views/header.html');
+    //display the contents of the page
+    $view = new Template();
+    echo $view->render('views/header.html');
+    echo $view->render("views/home_page.html");
+    echo $view->render('views/footer.html');
+});
+
+//sphynx queen page
+$f3->route('GET /sphynx-queens', function($f3)
+{
+
+    $valarie = new Adult_cat("PEARLHEARTS Valarie", "Current Queen",
+        "Valarie", "Seal Sepia", "Valarie is the Sphynx that started it all. She is the Queen of
+         the house, she is well adjusted and very afsfectionate", "February 18, 2017",
+        "Female");
+
+
+    $olive = new Adult_cat("MTRAINIER Olive", "Upcoming Queen",
+        "Olive", "Black Tortoiseshell", "Olive is a future queen. When she 
+        is a year old she will have all the proper health testing to ensure the health of the kittens",
+        "December 17, 2018",
+        "Female");
+
+    $f3->set("valarie",$valarie);
+    $f3->set("olive",$olive);
 
     //display the contents of the page
     $view = new Template();
-    echo $view->render("views/home_page.html");
+    echo $view->render('views/header.html');
+    echo $view->render("views/sphynx_queens.html");
+    echo $view->render('views/footer.html');
 
-    //require the footer after the contents of the page
-    require_once('views/footer.html');
 });
+
+//sphynx queen page
+$f3->route('GET /sphynx-kings', function()
+{
+
+    //display the contents of the page
+    $view = new Template();
+    echo $view->render('views/header.html');
+    echo $view->render("views/sphynx_kings.html");
+    echo $view->render('views/footer.html');
+
+});
+
+
+//sphynx queen page
+$f3->route('GET /sphynx-kittens', function()
+{
+
+    //display the contents of the page
+    $view = new Template();
+    echo $view->render('views/header.html');
+    echo $view->render("views/sphynx_kittens.html");
+    echo $view->render('views/footer.html');
+
+});
+
+//sphynx queen page
+$f3->route('GET /past-kittens', function()
+{
+
+    //display the contents of the page
+    $view = new Template();
+    echo $view->render('views/header.html');
+    echo $view->render("views/past_kittens.html");
+    echo $view->render('views/footer.html');
+
+});
+
+
+
+//kitten application
+$f3->route('GET /application', function()
+{
+
+    //display the contents of the page
+    $view = new Template();
+    echo $view->render('views/header.html');
+    echo $view->render("views/application.html");
+    echo $view->render('views/footer.html');
+
+});
+
+//sphynx queen page
+$f3->route('GET /contact-us', function()
+{
+
+    //display the contents of the page
+    $view = new Template();
+    echo $view->render('views/header.html');
+    echo $view->render("views/contact.html");
+    echo $view->render('views/footer.html');
+
+});
+
+//care
+$f3->route('GET /care', function()
+{
+
+    //display the contents of the page
+    $view = new Template();
+    echo $view->render('views/header.html');
+    echo $view->render("views/care.html");
+    echo $view->render('views/footer.html');
+
+});
+
+
 
 // Run Fat-Free
 $f3->run();
