@@ -91,6 +91,12 @@ card.mx-auto {
     margin-top: 3%;
 }
 
+.divider {
+    background-color: #d3d3d3 !important;
+    font-weight: bold;
+    border: none !important;
+}
+
 img#val_stairs {
     transform: rotate(90deg) scale(1, 1.5);
     padding: 37px;

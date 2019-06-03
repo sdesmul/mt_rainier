@@ -8,8 +8,80 @@
        <h1 class="header-title text-center" id="headTitle">Contact Us</h1>
 
 </div>
-  </div>
+    </div>
 </div>
+     <!-- main container for the page-->
+    <div class="container shadow-sm p-3  m-5 bg-white rounded mx-auto">
+        <h1>Contact us</h1>
+        <p>Before contacting us please fill out the Application, the email you
+         submit the application with will be the one you use to contact us</p>
+        <hr>
+        <form method="post" action="">
 
+                <div class="row">
+
+
+                        <!--Full name-->
+                        <div class="col-12">
+                            <label for="fname" class="form-label font-weight-bold mb-1">Full Name
+                              </label>
+                            <check if="{{@errors['name']}}">
+                                <p class="text-danger">{{ @errors['name'] }}</p>
+                            </check>
+
+                        <input class="form-control mb-2" type="text" value="{{@name}}" name="name"
+                               id="name">
+
+                        <!--Email-->
+                        <label for="email" class="form-label font-weight-bold mb-1">Email</label>
+
+                        <check if="{{@errors['email']}}">
+                            <p class="text-danger">{{ @errors['lname'] }}</p>
+                        </check>
+
+                        <input class="form-control mb-2" type="text" value="{{@email}}" name="email"
+                               id="email">
+
+                        <!--Age-->
+                        <div class="form-group">
+                            <label for="genderLook"
+                                   class="form-label font-weight-bold mb-0">Message Type</label><br>
+                            <check if="{{@errorsContact['genderLook'] }}">
+                                <p class="text-danger">{{@errorsProfile['genderLook']}}</p>
+                            </check>
+                            <!--Male-->
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input mr-2" type="radio"
+                                           name="genderLook" id="genderLook" value="waitlist"
+                                    <check if="{{@genderLook == 'male'}}">checked</check>
+                                    >Place me on the kitten waitlist
+                                </label>
+                            </div>
+
+                            <!--Female-->
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input mr-2" type="radio"
+                                           name="genderLook" value="female"
+                                    <check if="{{@genderLook == 'female'}}">checked</check>
+                                    > Interested in placing a deposit on a kitten
+                                </label>
+                            </div>
+
+                        </div>
+
+                      </div>
+                           <div class="col-4">
+                              <div class="text-right">
+                                  <input type="submit" value="Next >" name="submit"
+                                         class="btn btn-primary my-4">
+                              </div>
+                          </div>
+                 </div>
+
+         </form>
+    </div>
+</div>
 
 </body>

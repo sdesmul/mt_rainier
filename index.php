@@ -38,10 +38,8 @@ $f3->route('GET /sphynx-queens', function($f3)
 
     $valarie = new Adult_cat("PEARLHEARTS Valarie", "Current Queen",
         "Valarie", "Seal Sepia", "Valarie is the Sphynx that started it all. She is the Queen of
-         the house, she is well adjusted and very affectionate", "February 18, 2017",
+         the house, she is well adjusted and very afsfectionate", "February 18, 2017",
         "Female");
-
-    $f3->set("valarie",$valarie);
 
 
     $olive = new Adult_cat("MTRAINIER Olive", "Upcoming Queen",
@@ -50,6 +48,8 @@ $f3->route('GET /sphynx-queens', function($f3)
         "December 17, 2018",
         "Female");
 
+    $f3->set("valarie",$valarie);
+    $f3->set("olive",$olive);
 
     //display the contents of the page
     $view = new Template();
