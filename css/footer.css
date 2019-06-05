@@ -53,3 +53,7 @@ img#hcm {
 .fa-instagram:before {
     color: black;
 }
+
+li.list-inline-item {
+    padding-right: 21%;
+}
