@@ -7,6 +7,11 @@
  * This is validaton for the contact page
  */
 
+/**
+ * checks to see that a email is valid
+ * @param of the user
+ * @return bool true if a valid name
+ */
 function validName($name)
 {
 
@@ -16,19 +21,14 @@ function validName($name)
     return false;
 }
 
-/**
- * checks to see that a email is valid
- * @param $email the email of the user
- * @return bool true if a valid email
- */
+
 function validEmail($email)
 {
     //are there 11 numbers? no nothing else
     if (!empty($email)) {
         return true;
-    } else {
-        return false;
     }
+    return false;
 }
 
 /**
@@ -37,13 +37,10 @@ function validEmail($email)
  * @param $contactType
  * @return bool
  */
-function validContactType($contactType, $chosenContactTypes)
+function validMessageType($contactType)
 {
-    if (empty($chosenOutdoorActivities)) {
-        return false;
+    if (isset($contactType)) {
+        return true;
     }
-    foreach ($chosenContactTypes as $chosenContactType) {
-        if (!in_array($chosenContactType, $contactType)) return false;
-    }
-    return true;
+    return false;
 }

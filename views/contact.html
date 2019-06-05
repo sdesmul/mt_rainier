@@ -23,7 +23,7 @@
 
                         <!--Full name-->
                         <div class="col-12">
-                            <label for="fname" class="form-label font-weight-bold mb-1">Full Name
+                            <label for="name" class="form-label font-weight-bold mb-1">Full Name
                               </label>
                             <check if="{{@errors['name']}}">
                                 <p class="text-danger">{{ @errors['name'] }}</p>
@@ -36,35 +36,35 @@
                         <label for="email" class="form-label font-weight-bold mb-1">Email</label>
 
                         <check if="{{@errors['email']}}">
-                            <p class="text-danger">{{ @errors['lname'] }}</p>
+                            <p class="text-danger">{{ @errors['email'] }}</p>
                         </check>
 
                         <input class="form-control mb-2" type="text" value="{{@email}}" name="email"
                                id="email">
 
-                        <!--Age-->
+                        <!--message type-->
                         <div class="form-group">
-                            <label for="genderLook"
+                            <label for="messageType"
                                    class="form-label font-weight-bold mb-0">Message Type</label><br>
-                            <check if="{{@errorsContact['genderLook'] }}">
-                                <p class="text-danger">{{@errorsProfile['genderLook']}}</p>
+                            <check if="{{@errors['messageType'] }}">
+                                <p class="text-danger">{{@errors['messageType']}}</p>
                             </check>
-                            <!--Male-->
+                            <!--waitlist message type-->
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
                                     <input class="form-check-input mr-2" type="radio"
-                                           name="genderLook" id="genderLook" value="waitlist"
-                                    <check if="{{@genderLook == 'male'}}">checked</check>
-                                    >Place me on the kitten waitlist
+                                           name="messageType[]" id="messageType" value="waitlist"
+                                    <check if="{{@messageType == 'waitlist'}}">checked</check>
+                                    >Place me on the kitten wait list
                                 </label>
                             </div>
 
-                            <!--Female-->
+                            <!--deposit message type-->
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
                                     <input class="form-check-input mr-2" type="radio"
-                                           name="genderLook" value="female"
-                                    <check if="{{@genderLook == 'female'}}">checked</check>
+                                           name="messageType[]" value="deposit"
+                                    <check if="{{@messageType == 'deposit'}}">checked</check>
                                     > Interested in placing a deposit on a kitten
                                 </label>
                             </div>
