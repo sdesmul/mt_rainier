@@ -1,10 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: saman
- * Date: 5/26/2019
- * Time: 10:10 PM
- */class Adult_cat extends Cat{
+
+/**@Author Samantha DeSmul
+ * Class Adult_cat
+ * This cat represent a adult cat
+ */
+class Adult_cat extends Cat{
     private $_registeredName;
     //are they a upcoming, current, or retired adult cat
     private $_status;

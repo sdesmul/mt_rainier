@@ -158,9 +158,13 @@
     </div>
     <div class="col-md-8 mx-auto">
       <div class="card-body">
-        <h5 class="card-title">PEARLHEARTS VALARIE</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <h5 class="card-title">{{@magnolia->getName()}}</h5>
+                   <p class="card-text"> Status: {{@magnolia->getStatus()}}</p>
+                   <p class="card-text"> Registered Name: {{@magnolia->getRegisteredName()}}</p>
+                   <p class="card-text"> Color: {{@magnolia->getColor()}}</p>
+                   <p class="card-text"> Description: {{@magnolia->getDescription()}}</p>
+                   <p class="card-text"> Birthday: {{@magnolia->getBirthday()}}</p>
+                   <p class="card-text"><small class="text-muted">Owned by MTRAINIER Cattery</small></p>
       </div>
     </div>
   </div>

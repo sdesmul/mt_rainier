@@ -10,11 +10,24 @@
 </div>
     </div>
 </div>
+
+<div class="container shadow-sm p-3  m-5 bg-white rounded mx-auto">
+<div class="card ">
+  <div class="card-header">
+    Application required
+  </div>
+  <div class="card-body">
+    <p class="card-text"> Before contacting us regarding purchasing a kitten or
+    being put on the waitlist please read and agree to the application requirements. When you purchase a kitten you
+    must sign a hard copy of the application</p>
+    <a href="application" class="btn btn-outline-secondary">Application</a>
+  </div>
+</div>
+</div>
      <!-- main container for the page-->
     <div class="container shadow-sm p-3  m-5 bg-white rounded mx-auto">
-        <h1>Contact us</h1>
-        <p>Before contacting us please fill out the Application, the email you
-         submit the application with will be the one you use to contact us</p>
+        <h1>Contact </h1>
+
         <hr>
         <form method="post" action="">
 
@@ -23,17 +36,21 @@
 
                         <!--Full name-->
                         <div class="col-12">
-                            <label for="name" class="form-label font-weight-bold mb-1">Full Name
-                              </label>
+<div class="">
+                            <label for="name" class="text-left form-label font-weight-bold mb-1">Full Name<span class="text-danger">*</span>
+                               <p class="w-25 text-right text-danger float-right ml-5 pl-5">*required</p></label>
+
+                              </div>
+                              <div>
                             <check if="{{@errors['name']}}">
                                 <p class="text-danger">{{ @errors['name'] }}</p>
                             </check>
-
+                            </div>
                         <input class="form-control mb-2" type="text" value="{{@name}}" name="name"
                                id="name">
 
                         <!--Email-->
-                        <label for="email" class="form-label font-weight-bold mb-1">Email</label>
+                        <label for="email" class="form-label font-weight-bold mb-1">Email<span class="text-danger">*</span></label>
 
                         <check if="{{@errors['email']}}">
                             <p class="text-danger">{{ @errors['email'] }}</p>
@@ -45,7 +62,7 @@
                         <!--message type-->
                         <div class="form-group">
                             <label for="messageType"
-                                   class="form-label font-weight-bold mb-0">Message Type</label><br>
+                                   class="form-label font-weight-bold mb-0">Message Type<span class="text-danger">*</span></label><br>
                             <check if="{{@errors['messageType'] }}">
                                 <p class="text-danger">{{@errors['messageType']}}</p>
                             </check>
@@ -53,7 +70,7 @@
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
                                     <input class="form-check-input mr-2" type="radio"
-                                           name="messageType[]" id="messageType" value="waitlist"
+                                           name="messageType[]" value="waitlist" id="waitlist"
                                     <check if="{{@messageType == 'waitlist'}}">checked</check>
                                     >Place me on the kitten wait list
                                 </label>
@@ -63,7 +80,7 @@
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
                                     <input class="form-check-input mr-2" type="radio"
-                                           name="messageType[]" value="deposit"
+                                           name="messageType[]" value="deposit" id="deposit"
                                     <check if="{{@messageType == 'deposit'}}">checked</check>
                                     > Interested in placing a deposit on a kitten
                                 </label>
@@ -71,17 +88,16 @@
 
                         </div>
 
+
                       </div>
-                           <div class="col-4">
-                              <div class="text-right">
-                                  <input type="submit" value="Next >" name="submit"
-                                         class="btn btn-primary my-4">
-                              </div>
-                          </div>
+
                  </div>
+                 <input type="submit" value="Send >" name="submit"
+                 class="btn btn-outline-secondary my-4">
 
          </form>
     </div>
 </div>
+<script src="model/contact.js"></script>
 
 </body>

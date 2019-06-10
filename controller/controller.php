@@ -6,59 +6,23 @@
  * Time: 8:59 PM
  */
 
-require '/home/sdesmulc/config.php';
+//make SQL calls o load UI
+require_once 'classes/Database.php';
 
-//make SQL calls to load UI
-class Controller
+ $databaseObject = new Database();
+
+function addUser($names, $email, $messageType)
 {
-    public function __construct()
-    {
-        
-    }
+    global $databaseObject;
+    $conn = $databaseObject->connect();
 
-    /**
-     * @return PDO|void Create a DB connection to sdesmul database.
-     */
-    function connect()
-    {
-        try {
-            //instantiate a database object
-            $conn = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
-            $conn->setAttribute(PDO::ATTR_PERSISTENT, true);
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "Connected to database for Trivia Quack!";
-            //return connection
-            return $conn;
+    $sql = "insert into mtRainierDB (name,email,messageType) values (:name, :email, :messageType)";
+    $statement = $conn->prepare($sql);
+    $statement->bindParam(':name', $name, PDO::PARAM_STR);
+    $statement->bindParam(':email', $email, PDO::PARAM_STR);
+    $statement->bindParam(':messageType', $messageType, PDO::PARAM_STR);
 
-        } catch (PDOException $ex) {
-            echo "Connection failed" . "<br>";
-            echo $ex->getMessage();
-            return;
-        }
-
-    }
-
-
-    /**
-     * This method will display members
-     * @return array List of member details
-     */
-    function displayMembers()
-    {
-        global $conn;
-        //define query
-        $sql = "Select * from mtRainierDB ORDER by lastName";
-
-        //preapare
-        $statement = $conn->prepare($sql);
-
-        //execute
-        $statement->execute();
-
-        //get all
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-        return $result;
-    }
-
+    $statement->execute();
 }
+
+

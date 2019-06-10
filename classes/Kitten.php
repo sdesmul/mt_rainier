@@ -1,5 +1,9 @@
 <?php
 
+/**@Author Samantha DeSmul
+ * Class Kitten
+ * This class represents a kitten
+ */
 class Kitten extends Cat{
     //available, pending, or sold
     private $_available;
@@ -8,12 +12,21 @@ class Kitten extends Cat{
     private $_goHomeDate;
 
 
-
+    /**
+     * Kitten constructor.
+     * @param $available
+     * @param $goHomeDate
+     * @param $name
+     * @param $color
+     * @param $description
+     * @param $birthday
+     * @param $gender
+     */
     function __construct($available, $goHomeDate, $name,$color,$description,$birthday,$gender)
     {
         parent::__construct($name,$color,$description,$birthday,$gender);
 
-        $this->__available = $available;
+        $this->_available = $available;
         $this->_goHomeDate = $goHomeDate;
     }
 

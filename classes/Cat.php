@@ -1,4 +1,9 @@
 <?php
+
+/**@Author Samantha DeSmul
+ * Class Cat
+ * This class represents a generic cat
+ */
 class Cat{
     private $_name;
     private $_color;
@@ -7,9 +12,14 @@ class Cat{
     private $_gender;
 
 
-
-
-
+    /**
+     * Cat constructor.
+     * @param $name
+     * @param $color
+     * @param $description
+     * @param $birthday
+     * @param $gender
+     */
     function __construct($name, $color, $description, $birthday, $gender)
     {
         $this->_name = $name;
